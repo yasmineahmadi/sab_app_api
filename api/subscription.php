@@ -6,14 +6,16 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET");
 header("Access-Control-Allow-Headers: Content-Type");
 
-// Disable error output in production
+//  error output 
 ini_set('display_errors', 0);
 error_reporting(0);
 
 require 'auth/validate_token.php';
 
 try {
+  //validate user is logged
     $decoded = validateToken();
+
     $requestMethod = $_SERVER['REQUEST_METHOD'];
     
     if ($requestMethod === 'GET') {
@@ -23,7 +25,7 @@ try {
             'data' => getSubscriptionData()
         ];
         
-        // Clear buffer and output clean JSON
+        // Clear
         ob_end_clean();
         echo json_encode($response, JSON_UNESCAPED_UNICODE);
         exit;

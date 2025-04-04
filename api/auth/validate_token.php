@@ -34,17 +34,3 @@ function validateToken() {
     }
 }
 
-// // Example protected endpoint
-// if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-//     $decoded = validateToken();
-    
-//     // Token is valid, proceed with protected operation
-//     echo json_encode([
-//         'success' => true,
-//         'message' => 'Access granted',
-//         'user' => $decoded->data
-//     ]);
-// } else {
-//     http_response_code(405);
-//     echo json_encode(['success' => false, 'message' => 'Method not allowed']);
-// }

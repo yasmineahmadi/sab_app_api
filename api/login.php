@@ -4,11 +4,11 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
-// Add error reporting for debugging (remove in production)
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Verify the vendor path is correct
+
 require  '../vendor/autoload.php';
 use Firebase\JWT\JWT;
 
@@ -24,7 +24,7 @@ $users = [
 ];
 
 try {
-    // Get raw input and decode JSON
+    // decode JSON
     $json = file_get_contents('php://input');
     if (empty($json)) {
         throw new Exception('Empty request body');

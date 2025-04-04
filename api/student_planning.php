@@ -1,6 +1,8 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
+
+//validate user is logged
 require 'auth/validate_token.php';
 $decoded=validateToken();
 

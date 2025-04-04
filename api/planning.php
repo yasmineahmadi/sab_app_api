@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 
-
+//validate user is logged
 require 'auth/validate_token.php';
 $decoded=validateToken();
 
@@ -27,7 +27,7 @@ function getScheduleData() {
     ];
 }
 
-// Handle the request
+// request
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $data = getScheduleData();
     echo json_encode($data); 
