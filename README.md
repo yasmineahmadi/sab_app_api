@@ -6,7 +6,7 @@ A RESTful API
 ## API Endpoints
 
 ### Authentication
-- `POST /auth/login`
+- `POST /auth/login.php`
   - Authenticates users and returns a JWT token
   - Required fields: `username`, `password`
 
