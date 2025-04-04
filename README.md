@@ -39,7 +39,7 @@ A RESTful API
 
 ### Authenticating:
 
-    ```bash
+    ```
     
     fetch('/auth/login', {
     method: 'POST',
@@ -55,7 +55,7 @@ A RESTful API
 
 ### Accessing Protected Routes:
 
-    ```bash
+    ```
     fetch('/api/subscription.php', {
     headers: {
     'Authorization': 'Bearer YOUR_JWT_TOKEN',
@@ -70,7 +70,10 @@ A RESTful API
 ![Schedule Data Example](./shot.png)
 
 
-
+### contact us
+    ```
+    contact@cloudsoftware.tn
+    ```
 MIT License
 
 Copyright (c) 2025 CloudSoftware
