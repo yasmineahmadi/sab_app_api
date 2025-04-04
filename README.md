@@ -10,16 +10,16 @@ A RESTful API
   - Authenticates users and returns a JWT token
   - Required fields: `username`, `password`
 
-### Schedule Management
-- `GET /api/schedule`
-  - Returns schedule data
-- `GET /api/schedule?student={name}`
-  - Filters schedule by student name
-- `GET /api/schedule?teacher={name}`
+### Data Management
+- `GET /api/teacher_planning`
+  - Returns teacher schedule data
+- `GET /api/student_planning.php?student={name}`
+  - Filters  schedule by student name
+- `GET /api/student_planning.php?teacher={name}`
   - Filters schedule by teacher name
 
 ### Subscription Management
-- `GET /api/subscriptions`
+- `GET /api/subscription.php`
   - Returns all subscription data
   - Supports filtering by status, date, etc.
 
