@@ -35,3 +35,36 @@ A RESTful API
    ```bash
    php -S localhost:8000 .
    ```
+## Example Usage 💻
+
+### Authenticating:
+
+    ```bash
+    
+    fetch('/auth/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+    username: 'cloudsoftware',
+    password: 'admin123'
+    })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data.token));
+    ```
+
+### Accessing Protected Routes:
+
+    ```bash
+    fetch('/api/subscription.php', {
+    headers: {
+    'Authorization': 'Bearer YOUR_JWT_TOKEN',
+    'Content-Type': 'application/json'
+    }
+    })
+    .then(response => response.json())
+    .then(data => console.log(data));
+    ```
+
+### Sample  
+![Schedule Data Example](./shot.png)
