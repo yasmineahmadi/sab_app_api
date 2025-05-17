@@ -1,4 +1,4 @@
-#   API
+#   API for the app
 
 A RESTful API
 
